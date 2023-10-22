@@ -1,0 +1,70 @@
+command /jail [<player>] [<text>]:
+	permission: jail.sk
+	permission message: &c&lYou are not authorized to use the command!
+	trigger:
+		if arg-1 is set:
+			if {jail} is set:
+				broadcast "&a&l%arg-1% &7%player% was successfully jailed."
+				teleport arg-1 to {jail}
+				set {hapis::%arg-1%} to true
+				send "&cYou were imprisoned for 15 minutes for your crimes!" to arg-1
+				wait 15 minutes
+				teleport arg-1 to {spawn}
+				clear {hapis::%arg-1%}
+				send "&cYou're Out of Jail" to arg-1
+			else:
+				if player is op:
+					send "&bNo Jail Zone Found!" to player
+		if arg-1 is not set:
+			send "&cYou must type a Player Name!" to player
+
+			
+on join:
+	if {hapis::%player%} is set:
+		wait 1 seconds
+		loop 10 times:
+			teleport player to {jail}
+		send "Prison continues!" to player
+	
+on command "warp":
+	if {hapis::%player%} is set:
+		cancel event
+		send "&4&lYou Can't Escape From Here!" to player
+
+on command "hub":
+	if {hapis::%player%} is set:
+		cancel event
+		send "&4&lYou Can't Escape From Here!" to player
+
+on command "spawn":
+	if {hapis::%player%} is set:
+		cancel event
+		send "&4&lYou Can't Escape From Here!" to player
+					
+command /unjail [<offlineplayer>]:
+	permission: unjail.sk
+	permission message: &c&lYou are not authorized to use the command!
+	trigger:
+		if arg-1 is set:
+			clear {hapis::%arg-1%}
+			send "&a%player% was unjailed!" to arg-1
+			send "&c%arg-1% You were let loose!" to player
+			teleport arg-1 to {spawn}
+	
+
+	
+
+command /setjail:
+	permission: setjail.sk
+	permission message: &c&lYou are not authorized to use the command!
+	trigger:
+		set {jail} to player's location
+		send "&7Jail Zone Set" to player
+		
+		
+command /clearjail:
+	trigger:
+		if player is op:
+			clear {hapis::*}
+		
+	
