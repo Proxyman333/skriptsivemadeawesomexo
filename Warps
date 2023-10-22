@@ -1,0 +1,94 @@
+command /warp [<text>]:
+  trigger:
+    if arg is "underground":
+      if {location-underground} is not set:
+        send "&c&lERROR: &7This Warp is not made yet."
+        stop
+      if player has permission "skript.warp.underground":
+        teleport player to {location-underground}
+        send "&a&lWARP: &7You have teleported to The Underground."
+        stop
+      else:
+        send "&c&lERROR: &7You do not have the permission to warp there!"
+        stop
+    if arg is "nether":
+      if {location-nether} is not set:
+        send "&c&lERROR: &7This Warp is not made yet."
+        stop
+      if player has permission "skript.warp.nether":
+        teleport player to {location-nether}
+        send "&a&lWARP: &7You have teleported to The Nether."
+        stop
+      else:
+        send "&c&lERROR: &7You do not have the permission to warp there"
+        stop
+    if arg is "wither king":
+      if {location-kingwither} is not set:
+        send "&c&lERROR: &7This Warp is not made yet."
+        stop
+      if player has permission "skript.warp.nether":
+        teleport player to {location-kingwither}
+        send "&a&lWARP: &7You have teleported to The Wither King's Arena."
+        stop
+      else:
+        send "&c&lERROR: &7You do not have the permission to warp there"
+        stop
+    if arg is "heaven":
+      if {location-heaven} is not set:
+        send "&c&lERROR: &7This Warp is not made yet."
+        stop
+      if player has permission "skript.warp.heaven":
+        teleport player to {location-heaven}
+        send "&a&lWARP: &7You have teleported to The Heavens."
+        stop
+      else:
+        send "&c&lERROR: &7You do not have the permission to warp there!"
+        stop
+
+    send "&x&f&f&f&f&f&f&lList: &c&l↓ Area Warps ↓"
+    send "&a&lWARP: &7&lThe Underground &7warp (You need The Underground Warp Permsission.)"
+    send "&a&lWARP: &4&lThe Nether &7warp (You need The Underground Warp Permsission.)"
+    send "&a&lWARP:&r &lThe Heavens &7warp (You need The Heavens Warp Permsission.)"
+    send "&x&f&f&f&f&f&f------------------------------------------------------------"
+    send "&x&f&f&f&f&f&f&lList: &c&l↓ Boss Warps ↓"
+    send "&a&lWARP: &x&f&f&1&b&1&b&lThe Wither King &7arena (You need The Nether Warp Permsission.)"
+    stop
+
+
+command /setwarp [<text>]:
+  trigger:
+    if player is op:
+      set {location-%arg-1%} to player's location
+      send "&a&lWARP: &7You have made new warp named &6%arg-1%"
+      stop
+    else:
+      send "&c&lERROR: &7You do not have permission."
+	  
+
+on right click with paper:
+  if player's tool is paper named "&8The Underground Warp Token":
+    remove 1 paper named "&8The Underground Warp Token" from player's inventory
+    send "&a&lWARP: &7You now got permission to /warp underground"
+    execute console command "/lp user %player% permission set skript.warp.underground true"
+    stop
+on right click with paper:
+  if player's tool is paper named "&4The Nether Warp Token":
+    remove 1 paper named "&4The Nether Warp Token" from player's inventory
+    send "&a&lWARP: &7You now got permission to /warp nether"
+    execute console command "/lp user %player% permission set skript.warp.nether true"
+    stop
+on right click with paper:
+  if player's tool is paper named "&x&f&f&f&f&f&fT&x&f&f&f&f&f&fh&x&f&f&f&f&f&fe &x&f&f&f&f&f&fH&x&f&f&f&f&f&fe&x&f&f&f&f&f&fa&x&f&f&f&f&f&fv&x&f&f&f&f&f&fe&x&f&f&f&f&f&fn&x&f&f&f&f&f&fs &x&f&f&f&f&f&fW&x&f&f&f&f&f&fa&x&f&f&f&f&f&fr&x&f&f&f&f&f&fp &x&f&f&f&f&f&fT&x&f&f&f&f&f&fo&x&f&f&f&f&f&fk&x&f&f&f&f&f&fe&x&f&f&f&f&f&fn":
+    remove 1 paper named "&x&f&f&f&f&f&fT&x&f&f&f&f&f&fh&x&f&f&f&f&f&fe &x&f&f&f&f&f&fH&x&f&f&f&f&f&fe&x&f&f&f&f&f&fa&x&f&f&f&f&f&fv&x&f&f&f&f&f&fe&x&f&f&f&f&f&fn&x&f&f&f&f&f&fs &x&f&f&f&f&f&fW&x&f&f&f&f&f&fa&x&f&f&f&f&f&fr&x&f&f&f&f&f&fp &x&f&f&f&f&f&fT&x&f&f&f&f&f&fo&x&f&f&f&f&f&fk&x&f&f&f&f&f&fe&x&f&f&f&f&f&fn" from player's inventory
+    send "&a&lWARP: &7You now got permission to /warp heaven"
+    execute console command "/lp user %player% permission set skript.warp.heaven true"
+    stop
+command /warps:
+ trigger:
+  send "Do /warp instead"
+command /warpinfo:
+ trigger:
+  send "Do /warp instead"
+command /howtowarp:
+ trigger:
+  send "Do /warp instead"
