@@ -1,0 +1,99 @@
+command /daily:
+    cooldown: 12 hours
+    cooldown message: &ePlease Wait %remaining time% To get your Daily Key Again
+    trigger:
+        if the player has space for a tripwire hook:
+            give 1 lime dye named "&x&0&0&f&b&7&3D&x&1&3&e&d&8&7a&x&2&7&d&f&9&ai&x&3&a&d&1&a&el&x&4&d&c&4&c&2y" to the player
+        else:
+            send "inventory is full."
+command /dirt:
+ trigger:
+  execute console command "/minecraft:teleport %player% -63 -10 145"
+ 
+command /stone:
+ trigger:
+  execute console command "/minecraft:teleport %player% -26 -12 121"
+
+command /wood:
+ trigger:
+  execute console command "/minecraft:teleport %player% --75 -12 121"
+
+command /nether:
+ trigger:
+  make player execute command "/warp nether"
+
+command /underground:
+ trigger:
+  make player execute command "/warp underground"
+
+command /kingwither:
+ trigger:
+  make player execute command "/warp wither king"
+
+command /witherking:
+ trigger:
+  make player execute command "/warp wither king"
+
+command /kingwitherarena:
+ trigger:
+  make player execute command "/warp wither king"
+  
+command /heaven:
+ trigger:
+  make player execute command "/warp heaven"
+  
+command /cave:
+ trigger:
+  execute console command "/minecraft:tp %player% -50 -24 139"
+
+command /discord:
+ trigger:
+  send "------------------------------"
+  send "&6https://discord.gg/KqqQkn5a"
+  send "----&cCode KqqQkn5a----"
+  send "------------------------------"
+
+command /super:
+    cooldown: 12 hours
+    cooldown message: &ePlease Wait %remaining time% To get your Ranks Tokens Again
+    trigger:
+        if player has permission "skript.rank.super":
+            give 5 light blue dye named "&x&0&0&f&f&d&1R&x&0&7&e&3&d&6a&x&0&f&c&6&d&bn&x&1&6&a&a&e&0k &x&1&d&8&e&e&5T&x&2&5&7&1&e&bo&x&2&c&5&5&f&0k&x&3&3&3&9&f&5e&x&3&b&1&c&f&an&x&4&2&0&0&f&fs" to the player
+        else:
+            send "&7Your Not Super Rank"
+
+command /mega:
+    cooldown: 12 hours
+    cooldown message: &ePlease Wait %remaining time% To get your Ranks Tokens Again
+    trigger:
+        if player has permission "skript.rank.mega":
+            give 10 light blue dye named "&x&0&0&f&f&d&1R&x&0&7&e&3&d&6a&x&0&f&c&6&d&bn&x&1&6&a&a&e&0k &x&1&d&8&e&e&5T&x&2&5&7&1&e&bo&x&2&c&5&5&f&0k&x&3&3&3&9&f&5e&x&3&b&1&c&f&an&x&4&2&0&0&f&fs" to the player
+        else:
+            send "&7Your Not Mega Rank"
+
+command /legend:
+    cooldown: 12 hours
+    cooldown message: &ePlease Wait %remaining time% To get your Ranks Tokens Again
+    trigger:
+        if player has permission "skript.rank.legend":
+            give 20 light blue dye named "&x&0&0&f&f&d&1R&x&0&7&e&3&d&6a&x&0&f&c&6&d&bn&x&1&6&a&a&e&0k &x&1&d&8&e&e&5T&x&2&5&7&1&e&bo&x&2&c&5&5&f&0k&x&3&3&3&9&f&5e&x&3&b&1&c&f&an&x&4&2&0&0&f&fs" to the player
+        else:
+            send "&7Your Not Legend Rank"
+
+command /fang:
+    cooldown: 12 hours
+    cooldown message: &ePlease Wait %remaining time% To get your Ranks Tokens Again
+    trigger:
+        if player has permission "skript.rank.fang":
+            give 40 light blue dye named "&x&0&0&f&f&d&1R&x&0&7&e&3&d&6a&x&0&f&c&6&d&bn&x&1&6&a&a&e&0k &x&1&d&8&e&e&5T&x&2&5&7&1&e&bo&x&2&c&5&5&f&0k&x&3&3&3&9&f&5e&x&3&b&1&c&f&an&x&4&2&0&0&f&fs" to the player
+        else:
+            send "&7Your Not Fang Rank"
+
+command /custom:
+    cooldown: 12 hours
+    cooldown message: &ePlease Wait %remaining time% To get your Ranks Tokens Again
+    trigger:
+        if player has permission "skript.rank.custom":
+            give 60 light blue dye named "&x&0&0&f&f&d&1R&x&0&7&e&3&d&6a&x&0&f&c&6&d&bn&x&1&6&a&a&e&0k &x&1&d&8&e&e&5T&x&2&5&7&1&e&bo&x&2&c&5&5&f&0k&x&3&3&3&9&f&5e&x&3&b&1&c&f&an&x&4&2&0&0&f&fs" to the player
+        else:
+            send "&7Your Not Custom Rank"
