@@ -1,0 +1,41 @@
+command /Vip:
+    aliases: /Vip
+    permission: vipmine.warp
+    trigger:
+        execute console command "/tp %player% 24 123 60"
+		
+command /Emperor:
+    aliases: /Emperor
+    permission: emperormine.warp
+    trigger:
+        execute console command "/tp %player% -35 124 96"
+
+command /Overlord:
+    aliases: /Overlord
+    permission: overlordmine.warp
+    trigger:
+        execute console command "/tp %player% -35 123 84"
+		
+command /Legend:
+    aliases: /Legend
+    permission: legendmine.warp
+    trigger:
+        execute console command "/tp %player% 24 123 77"
+	
+command /youtube:
+    aliases: /youtube
+    permission: youtubemine.warp
+    trigger:
+        execute console command "/tp %player% 32 123 91"
+		
+command /Mystic:
+    aliases: /Mystic
+    permission: mysticmine.warp
+    trigger:
+        execute console command "/tp %player% 25 123 93"
+		
+command /Venom:
+    aliases: /Venom
+    permission: venommine.warp
+    trigger:
+        execute console command "/tp %player% -35 123 70"
