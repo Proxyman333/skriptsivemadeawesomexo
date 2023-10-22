@@ -97,3 +97,9 @@ command /custom:
             give 60 light blue dye named "&x&0&0&f&f&d&1R&x&0&7&e&3&d&6a&x&0&f&c&6&d&bn&x&1&6&a&a&e&0k &x&1&d&8&e&e&5T&x&2&5&7&1&e&bo&x&2&c&5&5&f&0k&x&3&3&3&9&f&5e&x&3&b&1&c&f&an&x&4&2&0&0&f&fs" to the player
         else:
             send "&7Your Not Custom Rank"
+
+command /chatgamemom:
+ trigger:
+  broadcast "&6&l---------------------------------------------------"
+  broadcast "&7&lFirst to geuss The Owner's &x&f&b&9&d&9&d&lM&x&f&c&b&8&8&c&lo&x&f&c&d&3&7&b&lm&x&f&d&e&e&6&a&ls&l&7 age Gets a Nether key 30-50!"
+  broadcast "&6&l---------------------------------------------------"
