@@ -1,0 +1,236 @@
+#AwesomexO Coded 192 Lines of This Skript ( Everything Else )
+#Chichi Coded 44 Lines of This Skript ( Just the Chance Stuff )
+command /setmaze [<text>]:
+  trigger:
+    if player is op:
+      set {location-%arg-1%} to player's location
+      send "&a&lMAZE: &7You have made new maze named &6%arg-1%"
+      stop
+    else:
+      send "&c&lERROR: &7You do not have permission."
+	  #Type The Number EX, /setmaze maze1 /setmaze maze2...
+
+command /maze:
+    cooldown: 30 seconds
+    cooldown message: &cPlease wait 30 Seconds!
+    trigger:
+        send "&aYou are being sent to a Random Maze!" to player
+        chance of 80%:
+            teleport player to {location-maze1}
+            send "&aYou have been teleported to the EASIEST Maze! [80%%]" to player
+            stop
+        chance of 70%:
+            teleport player to {location-maze2}
+            send "&aYou have been teleported to the 2nd Maze! [70%%]" to player
+            stop
+        chance of 60%:
+            teleport player to {location-maze3}
+            send "&aYou have been teleported to the 3rd Maze! [60%%]" to player
+            stop
+        chance of 50%:
+            teleport player to {location-maze4}
+            send "&aYou have been teleported to the 4rth Maze! [50%%]" to player
+            stop
+        chance of 40%:
+            teleport player to {location-maze5}
+            send "&aYou have been teleported to the 5th Maze! [40%%]" to player
+            stop
+        chance of 30%:
+            teleport player to {location-maze6}
+            send "&aYou have been teleported to the 6th Maze! [30%%]" to player
+            stop
+        chance of 20%:
+            teleport player to {location-maze7}
+            send "&aYou have been teleported to the 7th Maze! [20%%]" to player
+            stop
+        chance of 10%:
+            teleport player to {location-maze8}
+            send "&aYou have been teleported to the 8th Maze! [10%%]" to player
+            stop
+        chance of 5%:
+            teleport player to {location-maze9}
+            send "&aYou have been teleported to the 9th Maze! [5%%]" to player
+            stop
+        chance of 1%:
+            teleport player to {location-maze10}
+            send "&aYou have been teleported to the HARDEST Maze! Goodluck! [1%%]" to player
+            stop
+			#Base Made By Chichi 
+			#Polished By AwesomexO
+command /nextmaze [<text>]:
+  trigger:
+    if arg is "2":
+      if {location-maze2} is not set:
+        send "&c&lERROR: &7This Maze is not made yet."
+        stop
+      if player has permission "skript.maze.nextmaze.2":
+        teleport player to {location-maze2}
+        send "&a&lMAZE: &7You have Continued Your Journey Into the Maze."
+        execute console command "lp user %player% permission unset skript.maze.nextmaze.2"
+        stop
+      else:
+        send "&c&lERROR: &7You do not have the permission to Continue there!"
+        stop
+    if arg is "3":
+      if {location-maze3} is not set:
+        send "&c&lERROR: &7This Maze is not made yet."
+        stop
+      if player has permission "skript.maze.nextmaze.3":
+        teleport player to {location-maze3}
+        send "&a&lMAZE: &7You have Continued Your Journey Into the Maze."
+        execute console command "lp user %player% permission unset skript.maze.nextmaze.3"
+        stop
+      else:
+        send "&c&lERROR: &7You do not have the permission to Continue there!"
+        stop
+    if arg is "4":
+      if {location-maze4} is not set:
+        send "&c&lERROR: &7This Maze is not made yet."
+        stop
+      if player has permission "skript.maze.nextmaze.4":
+        teleport player to {location-maze3}
+        send "&a&lMAZE: &7You have Continued Your Journey Into the Maze."
+        execute console command "lp user %player% permission unset skript.maze.nextmaze.4"
+        stop
+      else:
+        send "&c&lERROR: &7You do not have the permission to Continue there!"
+        stop
+    if arg is "5":
+      if {location-maze5} is not set:
+        send "&c&lERROR: &7This Maze is not made yet."
+        stop
+      if player has permission "skript.maze.nextmaze.5":
+        teleport player to {location-maze3}
+        send "&a&lMAZE: &7You have Continued Your Journey Into the Maze."
+        execute console command "lp user %player% permission unset skript.maze.nextmaze.5"
+        stop
+      else:
+        send "&c&lERROR: &7You do not have the permission to Continue there!"
+        stop
+    if arg is "6":
+      if {location-maze6} is not set:
+        send "&c&lERROR: &7This Maze is not made yet."
+        stop
+      if player has permission "skript.maze.nextmaze.6":
+        teleport player to {location-maze6}
+        send "&a&lMAZE: &7You have Continued Your Journey Into the Maze."
+        execute console command "lp user %player% permission unset skript.maze.nextmaze.6"
+        stop
+      else:
+        send "&c&lERROR: &7You do not have the permission to Continue there!"
+        stop
+    if arg is "7":
+      if {location-maze7} is not set:
+        send "&c&lERROR: &7This Maze is not made yet."
+        stop
+      if player has permission "skript.maze.nextmaze.7":
+        teleport player to {location-maze7}
+        send "&a&lMAZE: &7You have Continued Your Journey Into the Maze."
+        execute console command "lp user %player% permission unset skript.maze.nextmaze.7"
+        stop
+      else:
+        send "&c&lERROR: &7You do not have the permission to Continue there!"
+        stop
+    if arg is "8":
+      if {location-maze8} is not set:
+        send "&c&lERROR: &7This Maze is not made yet."
+        stop
+      if player has permission "skript.maze.nextmaze.8":
+        teleport player to {location-maze8}
+        send "&a&lMAZE: &7You have Continued Your Journey Into the Maze Knowing You are Almost &a&lVictorious."
+        execute console command "lp user %player% permission unset skript.maze.nextmaze.8"
+        stop
+      else:
+        send "&c&lERROR: &7You do not have the permission to Continue there!"
+        stop
+    if arg is "9":
+      if {location-maze9} is not set:
+        send "&c&lERROR: &7This Maze is not made yet."
+        stop
+      if player has permission "skript.maze.nextmaze.9":
+        teleport player to {location-maze9}
+        send "&a&lMAZE: &7You Are So &6Close to Completing&7 Your Journey Into the Maze."
+        execute console command "lp user %player% permission unset skript.maze.nextmaze.9"
+        stop
+      else:
+        send "&c&lERROR: &7You do not have the permission to Continue there!"
+        stop
+    if arg is "10":
+      if {location-maze10} is not set:
+        send "&c&lERROR: &7This Maze is not made yet."
+        stop
+      if player has permission "skript.maze.nextmaze.10":
+        teleport player to {location-maze10}
+        send "&c&lMAZE: &7You have &cCompleted&7 Your Journey Into the Maze."
+        execute console command "lp user %player% permission unset skript.maze.nextmaze.10"
+        stop
+      else:
+        send "&c&lERROR: &7You do not have the permission to Continue there!"
+        stop
+
+on right click with paper:
+  if player's tool is paper named "&x&f&b&f&b&f&bM&x&f&b&f&b&f&ba&x&f&b&f&b&f&bz&x&f&b&f&b&f&be &x&f&c&f&c&f&cT&x&f&c&f&c&f&co&x&f&c&f&c&f&ck&x&f&c&f&c&f&ce&x&f&c&f&c&f&cn &x&f&c&f&c&f&cF&x&f&c&f&c&f&cl&x&f&d&f&d&f&do&x&f&d&f&d&f&do&x&f&d&f&d&f&dr &x&f&d&f&d&f&d2":
+    remove 1 paper named "&x&f&b&f&b&f&bM&x&f&b&f&b&f&ba&x&f&b&f&b&f&bz&x&f&b&f&b&f&be &x&f&c&f&c&f&cT&x&f&c&f&c&f&co&x&f&c&f&c&f&ck&x&f&c&f&c&f&ce&x&f&c&f&c&f&cn &x&f&c&f&c&f&cF&x&f&c&f&c&f&cl&x&f&d&f&d&f&do&x&f&d&f&d&f&do&x&f&d&f&d&f&dr &x&f&d&f&d&f&d2" from player's inventory
+    send "&a&lMAZE: &7You are now able to /nextmaze 2 &cOnly Can Go Can Continue One Time Per Paper"
+    execute console command "/lp user %player% permission set skript.maze.nextmaze.2 true"
+    stop
+on right click with paper:
+  if player's tool is paper named "&x&f&b&f&b&f&bM&x&f&3&f&3&f&3a&x&e&b&e&b&e&bz&x&e&3&e&3&e&3e &x&d&b&d&b&d&bT&x&d&3&d&3&d&3o&x&c&b&c&b&c&bk&x&c&3&c&3&c&3e&x&b&a&b&a&b&an &x&b&2&b&2&b&2F&x&a&a&a&a&a&al&x&a&2&a&2&a&2o&x&9&a&9&a&9&ao&x&9&2&9&2&9&2r &x&8&a&8&a&8&a3":
+    remove 1 paper named "&x&f&b&f&b&f&bM&x&f&3&f&3&f&3a&x&e&b&e&b&e&bz&x&e&3&e&3&e&3e &x&d&b&d&b&d&bT&x&d&3&d&3&d&3o&x&c&b&c&b&c&bk&x&c&3&c&3&c&3e&x&b&a&b&a&b&an &x&b&2&b&2&b&2F&x&a&a&a&a&a&al&x&a&2&a&2&a&2o&x&9&a&9&a&9&ao&x&9&2&9&2&9&2r &x&8&a&8&a&8&a3" from player's inventory
+    send "&a&lMAZE: &7You are now able to /nextmaze 3 &cOnly Can Go Can Continue One Time Per Paper"
+    execute console command "/lp user %player% permission set skript.maze.nextmaze.3 true"
+    stop
+on right click with paper:
+  if player's tool is paper named "&x&f&b&f&b&f&bM&x&e&f&e&f&e&fa&x&e&3&e&3&e&3z&x&d&7&d&7&d&7e &x&c&b&c&b&c&bT&x&b&f&b&f&b&fo&x&b&3&b&3&b&3k&x&a&7&a&7&a&7e&x&9&a&9&a&9&an &x&8&e&8&e&8&eF&x&8&2&8&2&8&2l&x&7&6&7&6&7&6o&x&6&a&6&a&6&ao&x&5&e&5&e&5&er &x&5&2&5&2&5&24":
+    remove 1 paper named "&x&f&b&f&b&f&bM&x&e&f&e&f&e&fa&x&e&3&e&3&e&3z&x&d&7&d&7&d&7e &x&c&b&c&b&c&bT&x&b&f&b&f&b&fo&x&b&3&b&3&b&3k&x&a&7&a&7&a&7e&x&9&a&9&a&9&an &x&8&e&8&e&8&eF&x&8&2&8&2&8&2l&x&7&6&7&6&7&6o&x&6&a&6&a&6&ao&x&5&e&5&e&5&er &x&5&2&5&2&5&24" from player's inventory
+    send "&a&lMAZE: &7You are now able to /nextmaze 4 &cOnly Can Go Can Continue One Time Per Paper"
+    execute console command "/lp user %player% permission set skript.maze.nextmaze.4 true"
+    stop
+on right click with paper:
+  if player's tool is paper named "&x&f&b&f&b&f&bM&x&e&9&e&9&e&9a&x&d&7&d&7&d&7z&x&c&5&c&5&c&5e &x&b&3&b&3&b&3T&x&a&1&a&1&a&1o&x&8&f&8&f&8&fk&x&7&e&7&e&7&ee&x&6&c&6&c&6&cn &x&5&a&5&a&5&aF&x&4&8&4&8&4&8l&x&3&6&3&6&3&6o&x&2&4&2&4&2&4o&x&1&2&1&2&1&2r &x&0&0&0&0&0&05":
+    remove 1 paper named "&x&f&b&f&b&f&bM&x&e&9&e&9&e&9a&x&d&7&d&7&d&7z&x&c&5&c&5&c&5e &x&b&3&b&3&b&3T&x&a&1&a&1&a&1o&x&8&f&8&f&8&fk&x&7&e&7&e&7&ee&x&6&c&6&c&6&cn &x&5&a&5&a&5&aF&x&4&8&4&8&4&8l&x&3&6&3&6&3&6o&x&2&4&2&4&2&4o&x&1&2&1&2&1&2r &x&0&0&0&0&0&05" from player's inventory
+    send "&a&lMAZE: &7You are now able to /nextmaze 5 &cOnly Can Go Can Continue One Time Per Paper"
+    execute console command "/lp user %player% permission set skript.maze.nextmaze.5 true"
+    stop
+on right click with paper:
+  if player's tool is paper named "&x&f&b&f&b&f&bM&x&f&a&f&c&e&9a&x&f&9&f&c&d&8z&x&f&8&f&d&c&6e &x&f&8&f&d&b&4T&x&f&7&f&e&a&2o&x&f&6&f&e&9&1k&x&f&5&f&f&7&fe&x&e&8&f&c&8&0n &x&d&a&f&9&8&0F&x&c&d&f&6&8&1l&x&b&f&f&2&8&1o&x&b&2&e&f&8&2o&x&a&4&e&c&8&2r &x&9&7&e&9&8&36":
+    remove 1 paper named "&x&f&b&f&b&f&bM&x&f&a&f&c&e&9a&x&f&9&f&c&d&8z&x&f&8&f&d&c&6e &x&f&8&f&d&b&4T&x&f&7&f&e&a&2o&x&f&6&f&e&9&1k&x&f&5&f&f&7&fe&x&e&8&f&c&8&0n &x&d&a&f&9&8&0F&x&c&d&f&6&8&1l&x&b&f&f&2&8&1o&x&b&2&e&f&8&2o&x&a&4&e&c&8&2r &x&9&7&e&9&8&36" from player's inventory
+    send "&a&lMAZE: &7You are now able to /nextmaze 6 &cOnly Can Go Can Continue One Time Per Paper"
+    execute console command "/lp user %player% permission set skript.maze.nextmaze.6 true"
+    stop
+on right click with paper:
+  if player's tool is paper named "&x&f&b&f&b&f&bM&x&e&8&e&9&e&0a&x&d&5&d&6&c&5z&x&c&2&c&4&a&ae &x&a&f&b&2&8&eT&x&9&c&a&0&7&3o&x&8&9&8&d&5&8k&x&7&6&7&b&3&de&x&7&3&7&f&4&0n &x&7&0&8&2&4&3F&x&6&d&8&6&4&6l&x&6&9&8&9&4&ao&x&6&6&8&d&4&do&x&6&3&9&0&5&0r &x&6&0&9&4&5&37":
+    remove 1 paper named "&x&f&b&f&b&f&bM&x&e&8&e&9&e&0a&x&d&5&d&6&c&5z&x&c&2&c&4&a&ae &x&a&f&b&2&8&eT&x&9&c&a&0&7&3o&x&8&9&8&d&5&8k&x&7&6&7&b&3&de&x&7&3&7&f&4&0n &x&7&0&8&2&4&3F&x&6&d&8&6&4&6l&x&6&9&8&9&4&ao&x&6&6&8&d&4&do&x&6&3&9&0&5&0r &x&6&0&9&4&5&37" from player's inventory
+    send "&a&lMAZE: &7You are now able to /nextmaze 7 &cOnly Can Go Can Continue One Time Per Paper"
+    execute console command "/lp user %player% permission set skript.maze.nextmaze.7 true"
+    stop
+on right click with paper:
+  if player's tool is paper named "&x&f&b&f&b&f&bM&x&e&1&e&1&d&ca&x&c&7&c&8&b&ez&x&a&d&a&e&9&fe &x&9&3&9&5&8&0T&x&7&9&7&b&6&1o&x&5&f&6&2&4&3k&x&4&5&4&8&2&4e&x&4&3&4&9&2&5n &x&4&0&4&b&2&7F&x&3&e&4&c&2&8l&x&3&c&4&e&2&ao&x&3&a&4&f&2&bo&x&3&7&5&1&2&dr &x&3&5&5&2&2&e8":
+    remove 1 paper named "&x&f&b&f&b&f&bM&x&e&1&e&1&d&ca&x&c&7&c&8&b&ez&x&a&d&a&e&9&fe &x&9&3&9&5&8&0T&x&7&9&7&b&6&1o&x&5&f&6&2&4&3k&x&4&5&4&8&2&4e&x&4&3&4&9&2&5n &x&4&0&4&b&2&7F&x&3&e&4&c&2&8l&x&3&c&4&e&2&ao&x&3&a&4&f&2&bo&x&3&7&5&1&2&dr &x&3&5&5&2&2&e8" from player's inventory
+    send "&a&lMAZE: &7You are now able to /nextmaze 8 &cOnly Can Go Can Continue One Time Per Paper"
+    execute console command "/lp user %player% permission set skript.maze.nextmaze.8 true"
+    stop
+on right click with paper:
+  if player's tool is paper named "&x&f&b&f&b&f&bM&x&f&a&f&c&e&9a&x&f&9&f&c&d&8z&x&f&8&f&d&c&6e &x&f&8&f&d&b&4T&x&f&7&f&e&a&2o&x&f&6&f&e&9&1k&x&f&5&f&f&7&fe&x&d&2&d&b&6&dn &x&a&f&b&6&5&bF&x&8&c&9&2&4&9l&x&6&9&6&d&3&6o&x&4&6&4&9&2&4o&x&2&3&2&4&1&2r &x&0&0&0&0&0&09":
+    remove 1 paper named "&x&f&b&f&b&f&bM&x&f&a&f&c&e&9a&x&f&9&f&c&d&8z&x&f&8&f&d&c&6e &x&f&8&f&d&b&4T&x&f&7&f&e&a&2o&x&f&6&f&e&9&1k&x&f&5&f&f&7&fe&x&d&2&d&b&6&dn &x&a&f&b&6&5&bF&x&8&c&9&2&4&9l&x&6&9&6&d&3&6o&x&4&6&4&9&2&4o&x&2&3&2&4&1&2r &x&0&0&0&0&0&09" from player's inventory
+    send "&a&lMAZE: &7You are now able to /nextmaze 9 &cOnly Can Go Can Continue One Time Per Paper"
+    execute console command "/lp user %player% permission set skript.maze.nextmaze.9 true"
+    stop
+on right click with paper:
+  if player's tool is paper named "&x&f&b&0&0&0&0M&x&b&f&0&f&0&fa&x&8&3&1&f&1&fz&x&4&7&2&e&2&ee &x&3&6&3&c&2&dT&x&3&a&4&a&2&4o&x&3&d&5&8&1&bk&x&4&4&6&d&2&9e&x&5&1&9&2&6&5n &x&5&d&b&7&a&01&x&6&a&d&c&d&c0":
+    remove 1 paper named "&x&f&b&0&0&0&0M&x&b&f&0&f&0&fa&x&8&3&1&f&1&fz&x&4&7&2&e&2&ee &x&3&6&3&c&2&dT&x&3&a&4&a&2&4o&x&3&d&5&8&1&bk&x&4&4&6&d&2&9e&x&5&1&9&2&6&5n &x&5&d&b&7&a&01&x&6&a&d&c&d&c0" from player's inventory
+    send "&c&lMAZE: &7You are now able to /nextmaze 10 &cOnly Can Go Can Continue One Time Per Paper"
+    execute console command "/lp user %player% permission set skript.maze.nextmaze.10 true"
+    stop
+command /startermazop:
+ trigger:
+  if player is op:
+   give player paper named "&x&f&b&f&b&f&bM&x&f&b&f&b&f&ba&x&f&b&f&b&f&bz&x&f&b&f&b&f&be &x&f&c&f&c&f&cT&x&f&c&f&c&f&co&x&f&c&f&c&f&ck&x&f&c&f&c&f&ce&x&f&c&f&c&f&cn &x&f&c&f&c&f&cF&x&f&c&f&c&f&cl&x&f&d&f&d&f&do&x&f&d&f&d&f&do&x&f&d&f&d&f&dr &x&f&d&f&d&f&d2" with lore "&7Right Click to Gain Access to /nextmaze 2"
+   give player paper named "&x&f&b&f&b&f&bM&x&f&3&f&3&f&3a&x&e&b&e&b&e&bz&x&e&3&e&3&e&3e &x&d&b&d&b&d&bT&x&d&3&d&3&d&3o&x&c&b&c&b&c&bk&x&c&3&c&3&c&3e&x&b&a&b&a&b&an &x&b&2&b&2&b&2F&x&a&a&a&a&a&al&x&a&2&a&2&a&2o&x&9&a&9&a&9&ao&x&9&2&9&2&9&2r &x&8&a&8&a&8&a3" with lore "&7Right Click to Gain Access to /nextmaze 3"
+   give player paper named "&x&f&b&f&b&f&bM&x&e&f&e&f&e&fa&x&e&3&e&3&e&3z&x&d&7&d&7&d&7e &x&c&b&c&b&c&bT&x&b&f&b&f&b&fo&x&b&3&b&3&b&3k&x&a&7&a&7&a&7e&x&9&a&9&a&9&an &x&8&e&8&e&8&eF&x&8&2&8&2&8&2l&x&7&6&7&6&7&6o&x&6&a&6&a&6&ao&x&5&e&5&e&5&er &x&5&2&5&2&5&24" with lore "&7Right Click to Gain Access to /nextmaze 4"
+   give player paper named "&x&f&b&f&b&f&bM&x&e&9&e&9&e&9a&x&d&7&d&7&d&7z&x&c&5&c&5&c&5e &x&b&3&b&3&b&3T&x&a&1&a&1&a&1o&x&8&f&8&f&8&fk&x&7&e&7&e&7&ee&x&6&c&6&c&6&cn &x&5&a&5&a&5&aF&x&4&8&4&8&4&8l&x&3&6&3&6&3&6o&x&2&4&2&4&2&4o&x&1&2&1&2&1&2r &x&0&0&0&0&0&05" with lore "&7Right Click to Gain Access to /nextmaze 5"
+   give player paper named "&x&f&b&f&b&f&bM&x&f&a&f&c&e&9a&x&f&9&f&c&d&8z&x&f&8&f&d&c&6e &x&f&8&f&d&b&4T&x&f&7&f&e&a&2o&x&f&6&f&e&9&1k&x&f&5&f&f&7&fe&x&e&8&f&c&8&0n &x&d&a&f&9&8&0F&x&c&d&f&6&8&1l&x&b&f&f&2&8&1o&x&b&2&e&f&8&2o&x&a&4&e&c&8&2r &x&9&7&e&9&8&36" with lore "&7Right Click to Gain Access to /nextmaze 6"
+   give player paper named "&x&f&b&f&b&f&bM&x&e&8&e&9&e&0a&x&d&5&d&6&c&5z&x&c&2&c&4&a&ae &x&a&f&b&2&8&eT&x&9&c&a&0&7&3o&x&8&9&8&d&5&8k&x&7&6&7&b&3&de&x&7&3&7&f&4&0n &x&7&0&8&2&4&3F&x&6&d&8&6&4&6l&x&6&9&8&9&4&ao&x&6&6&8&d&4&do&x&6&3&9&0&5&0r &x&6&0&9&4&5&37" with lore "&7Right Click to Gain Access to /nextmaze 7"
+   give player paper named "&x&f&b&f&b&f&bM&x&e&1&e&1&d&ca&x&c&7&c&8&b&ez&x&a&d&a&e&9&fe &x&9&3&9&5&8&0T&x&7&9&7&b&6&1o&x&5&f&6&2&4&3k&x&4&5&4&8&2&4e&x&4&3&4&9&2&5n &x&4&0&4&b&2&7F&x&3&e&4&c&2&8l&x&3&c&4&e&2&ao&x&3&a&4&f&2&bo&x&3&7&5&1&2&dr &x&3&5&5&2&2&e8" with lore "&7Right Click to Gain Access to /nextmaze 8"
+   give player paper named "&x&f&b&f&b&f&bM&x&f&a&f&c&e&9a&x&f&9&f&c&d&8z&x&f&8&f&d&c&6e &x&f&8&f&d&b&4T&x&f&7&f&e&a&2o&x&f&6&f&e&9&1k&x&f&5&f&f&7&fe&x&d&2&d&b&6&dn &x&a&f&b&6&5&bF&x&8&c&9&2&4&9l&x&6&9&6&d&3&6o&x&4&6&4&9&2&4o&x&2&3&2&4&1&2r &x&0&0&0&0&0&09" with lore "&7Right Click to Gain Access to /nextmaze 9"
+   give player paper named "&x&f&b&0&0&0&0M&x&b&f&0&f&0&fa&x&8&3&1&f&1&fz&x&4&7&2&e&2&ee &x&3&6&3&c&2&dT&x&3&a&4&a&2&4o&x&3&d&5&8&1&bk&x&4&4&6&d&2&9e&x&5&1&9&2&6&5n &x&5&d&b&7&a&01&x&6&a&d&c&d&c0" with lore "&7Right Click to Gain Access to /nextmaze 10"
