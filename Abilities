@@ -24,3 +24,7 @@ on right click holding netherite axe:
     push player upwards at speed 4.0
     execute console command "/minecraft:effect give %player% slow_falling 5 5 true"
     set {JAxe.%%player's uuid.juaxe.lastUsed} to now
+
+on right click with stick:
+  if player's tool is stick of mending named "&x&5&1&5&3&6&8W&x&5&4&5&7&6&ci&x&5&7&5&b&7&0t&x&5&9&5&e&7&4h&x&5&c&6&2&7&8e&x&5&f&6&6&7&cr &x&6&2&6&a&8&0S&x&6&5&6&e&8&4t&x&6&7&7&1&8&8a&x&6&a&7&5&8&cf&x&6&d&7&9&9&0f":
+    make the player shoot a wither skull at speed 2
