@@ -1,0 +1,9 @@
+on player join:
+ if player is op:
+  make player execute command "/rg bypass"
+
+on player join:
+  broadcast "&7%player% Has Joined &x&f&f&c&7&0&0F&x&f&6&b&8&0&0a&x&e&e&a&8&0&0n&x&e&5&9&9&0&0g &x&d&d&8&a&0&0F&x&d&4&7&a&0&0i&x&c&c&6&b&0&0e&x&c&3&5&c&0&0r&x&b&b&4&d&0&0y &x&b&2&3&d&0&0S&x&a&a&2&e&0&0k&x&a&1&1&f&0&0i&x&9&9&0&f&0&0e&x&9&0&0&0&0&0s"
+
+on player join:
+ make player execute command "/spawn"
